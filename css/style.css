@@ -1,0 +1,226 @@
+#A {
+    color:#794c13;
+    font-size:18px;
+	text-align: center;
+}
+
+h1 {
+    color:#08680a;
+    font-size:30px;
+	text-align: center;
+}
+
+h2 {
+    color:#003206;
+    font-size:16px;
+	text-align: center;
+}
+
+a {
+	color:#087402;
+    font-size:14px;
+}
+
+#B {
+    color:#671C01;
+    font-size:16px;
+	text-align: center;
+}
+
+#H {
+    color:#671C01;
+    font-size:16px;
+	text-align: center;
+}
+
+#J {
+    color:#671C01;
+    font-size:16px;
+	text-align: left;
+}
+
+#cv {
+    width: 480px;
+	height: 269px;
+	position: absolute;
+	left: 0px
+}
+
+#mission {
+    width: 480px;
+	height: 269px;
+	position: absolute;
+	left: 0px
+}
+
+body {
+  background-color: #d1ffc8;
+}
+
+#SVG {
+  background-color: #808080;
+}   
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid black;
+  margin: auto;
+}
+
+aside {
+	float: right;
+	background-color: #00d526;
+	text-align: center;
+	width: 28%;
+	height: 50%;
+}
+
+nav {
+  float: right;
+  padding: 20px;
+  height: 300px;
+  max-height: 75%
+}
+
+section {
+  float: left;
+  padding: 20px;
+  width: 69%;
+  max-height: 75%;
+  background-color: #f1f1f1;
+  text-align: justify;
+  height: 300px
+}
+
+iframe {
+  float: left;
+  padding: 50px;
+  width: 85%;
+  height: 45%
+}
+
+#menu {
+	color:#FFFFFF;
+	font-size:20px;
+	
+}
+
+.principal {
+	color:#FFFFFF;
+	font-size:16px;
+	font-weight: bold;
+	list-style-type: none;
+	padding: 0;
+}	
+
+td {
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid black;
+  color: #671C01
+}
+
+th {
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid black;
+  font-weight: bold;
+  color:#003206;
+}
+
+ul {
+    color:#671C01;
+    font-size:16px;
+}
+#F {
+    width: 128px;
+	height: 128px;
+	position: absolute;
+	left: 0px
+}
+
+#G {
+    width: 128px;
+	height: 128px;
+	position: absolute;
+	right: 0px
+}
+
+#grias {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 547px;
+	height: 410px
+}
+
+#harvest {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 547px;
+	height: 410px
+}
+
+#violin {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 450px;
+	height: 400px
+}
+
+#alturas {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 556px;
+	height: 400px
+}
+
+#measure {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 384px;
+	height: 512px
+}
+
+#vivero {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 480px;
+	height: 269px
+}
+
+#ndvi {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    width: 470px;
+	height: 474px
+}
+
+#jbb {
+	display: block;
+	margin-right: auto;
+}
+
+#wms {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#legend {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+footer {
+	text-align: center;
+	color:#671C01;
+}
