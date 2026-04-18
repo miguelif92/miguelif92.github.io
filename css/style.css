@@ -1,226 +1,264 @@
-#A {
-    color:#794c13;
-    font-size:18px;
-	text-align: center;
+/* ── Variables ── */
+:root {
+  --ink: #1a1a18;
+  --muted: #5a5a52;
+  --accent: #2e5e3e;
+  --rule: #c8c4b8;
+  --bg: #f7f5f0;
+  --sidebar-bg: #edeae3;
+  --sidebar-w: 30%;
+  --gap: 0.85cm;
 }
 
-h1 {
-    color:#08680a;
-    font-size:30px;
-	text-align: center;
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-    color:#003206;
-    font-size:16px;
-	text-align: center;
-}
-
-a {
-	color:#087402;
-    font-size:14px;
-}
-
-#B {
-    color:#671C01;
-    font-size:16px;
-	text-align: center;
-}
-
-#H {
-    color:#671C01;
-    font-size:16px;
-	text-align: center;
-}
-
-#J {
-    color:#671C01;
-    font-size:16px;
-	text-align: left;
-}
-
-#cv {
-    width: 480px;
-	height: 269px;
-	position: absolute;
-	left: 0px
-}
-
-#mission {
-    width: 480px;
-	height: 269px;
-	position: absolute;
-	left: 0px
-}
-
+/* ── Body ── */
 body {
-  background-color: #d1ffc8;
+  background-image: url('../img/tree.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Times New Roman', times;
+  font-size: 10.5pt;
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
 }
 
-#SVG {
-  background-color: #808080;
-}   
+/* ── Page ── */
+.page {
+  padding: 1.25cm;
+  background: var(--bg);
+  width: 21cm;
+  min-height: 29.7cm;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+}
 
-table {
-  border-collapse: collapse;
+/* ── Header ── */
+.header {
   text-align: center;
-  border: 1px solid black;
-  margin: auto;
+  padding: 1.1cm 1.2cm 0.7cm;
+  border-bottom: 1.5px solid var(--rule);
 }
 
-aside {
-	float: right;
-	background-color: #00d526;
-	text-align: center;
-	width: 28%;
-	height: 50%;
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  line-height: 1.1;
 }
 
-nav {
-  float: right;
-  padding: 20px;
-  height: 300px;
-  max-height: 75%
+.header .tagline {
+  margin-top: 6px;
+  font-size: 9pt;
+  color: var(--muted);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-section {
-  float: left;
-  padding: 20px;
-  width: 69%;
-  max-height: 75%;
-  background-color: #f1f1f1;
-  text-align: justify;
-  height: 300px
+/* ── Two-column body ── */
+.body {
+  display: flex;
+  flex: 1;
 }
 
-iframe {
-  float: left;
-  padding: 50px;
-  width: 85%;
-  height: 45%
+/* ── Sidebar ── */
+.sidebar {
+  width: 42%;
+  background: var(--sidebar-bg);
+  padding: 0.7cm var(--gap);
+  border-right: 1.5px solid var(--rule);
+  flex-shrink: 0;
 }
 
-#menu {
-	color:#FFFFFF;
-	font-size:20px;
-	
+/* ── Main ── */
+.main {
+  flex: 1;
+  padding: 0.7cm var(--gap);
 }
 
-.principal {
-	color:#FFFFFF;
-	font-size:16px;
-	font-weight: bold;
-	list-style-type: none;
-	padding: 0;
-}	
-
-td {
-  border-collapse: collapse;
-  text-align: center;
-  border: 1px solid black;
-  color: #671C01
+/* ── Section headings ── */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+  margin-top: 16px;
 }
 
-th {
-  border-collapse: collapse;
-  text-align: center;
-  border: 1px solid black;
-  font-weight: bold;
-  color:#003206;
+.section-title:first-child { margin-top: 0; }
+
+/* ── Contact ── */
+.contact-item {
+  font-size: 9.5pt;
+  line-height: 1.65;
+  color: var(--ink);
 }
 
-ul {
-    color:#671C01;
-    font-size:16px;
-}
-#F {
-    width: 128px;
-	height: 128px;
-	position: absolute;
-	left: 0px
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
-#G {
-    width: 128px;
-	height: 128px;
-	position: absolute;
-	right: 0px
+.contact-item a:hover { text-decoration: underline; }
+
+/* ── Education ── */
+.edu-entry {
+  margin-bottom: 10px;
 }
 
-#grias {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 547px;
-	height: 410px
+.edu-entry .degree {
+  font-weight: 600;
+  font-size: 9.5pt;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
-#harvest {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 547px;
-	height: 410px
+.edu-entry .years {
+  font-size: 8.5pt;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 2px 0 1px;
 }
 
-#violin {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 450px;
-	height: 400px
+.edu-entry .institution {
+  font-size: 8.5pt;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
-#alturas {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 556px;
-	height: 400px
+/* ── Skills ── */
+.skill-line {
+  font-size: 9pt;
+  line-height: 1.6;
+  margin-bottom: 3px;
 }
 
-#measure {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 384px;
-	height: 512px
+.skill-line strong {
+  color: var(--accent);
+  font-weight: 600;
 }
 
-#vivero {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 480px;
-	height: 269px
+/* ── Languages ── */
+.lang-item {
+  font-size: 9pt;
+  line-height: 1.65;
+  color: var(--ink);
 }
 
-#ndvi {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-    width: 470px;
-	height: 474px
+/* ── Profile ── */
+.profile-text {
+  font-size: 9.5pt;
+  line-height: 1.65;
+  color: var(--muted);
+  font-weight: 300;
 }
 
-#jbb {
-	display: block;
-	margin-right: auto;
+/* ── Experience ── */
+.exp-entry {
+  margin-bottom: 11px;
 }
 
-#wms {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-#legend {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+.exp-title {
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--ink);
 }
 
-footer {
-	text-align: center;
-	color:#671C01;
+.exp-dates {
+  font-size: 8.5pt;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exp-org {
+  font-size: 8.5pt;
+  color: var(--muted);
+  font-style: italic;
+  margin: 1px 0 4px;
+}
+
+.exp-entry ul {
+  padding-left: 1.1em;
+  margin: 0;
+}
+
+.exp-entry li {
+  font-size: 9pt;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+/* ── Projects ── */
+.project-entry {
+  margin-bottom: 9px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 9pt;
+  color: var(--ink);
+}
+
+.project-meta {
+  font-size: 8.5pt;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.project-desc {
+  font-size: 9pt;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── Signature ── */
+.signature {
+  margin-top: 18px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  font-size: 8.5pt;
+  color: var(--muted);
+}
+
+.sig-line {
+  width: 4cm;
+  height: 1px;
+  background: var(--ink);
+  margin-top: 20px;
+  margin-bottom: 3px;
+}
+
+/* ── Print ── */
+@media print {
+  body { background: none; padding: 0; }
+  .page { box-shadow: none; width: 100%; min-height: 100vh; }
 }
