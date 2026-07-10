@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Miguel Salamanca</title>
+<meta name="description" content="Geospatial and forestry data projects by Miguel Salamanca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Miguel Salamanca <span class="coord">04.71°N 74.07°W → 52.84°N 13.82°E</span></a>
+    <nav class="primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="https://github.com/miguelif92" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" style="padding-bottom: 24px;">
+    <span class="eyebrow">Field notes</span>
+    <h1 style="max-width: 20ch;">Projects</h1>
+    <p class="lede">Applied geospatial analysis spanning urban forestry, tropical ecology and web mapping. Full code and notebooks live on GitHub.</p>
+  </section>
+
+  <svg class="contour wrap" viewBox="0 0 980 28" preserveAspectRatio="none">
+    <path d="M0,14 Q60,2 120,14 T240,14 T360,14 T480,14 T600,14 T720,14 T840,14 T980,14"></path>
+  </svg>
+
+  <section class="wrap" id="urapan">
+    <div class="section-head">
+      <span class="eyebrow">Bogotá, Colombia · SoSe 2026</span>
+      <h2>Urapán Street Tree Analysis</h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <p>A geospatial study of <em>Fraxinus uhdei</em> (Urapán) across Bogotá's public tree inventory, built for the Big Data coursework at HNEE. The project connects directly to the city's Urban Tree Census WFS endpoint, then moves through cleaning, spatial statistics, and visualization entirely inside remote Jupyter notebooks over SSH.</p>
+        <p>Distribution is mapped as an interactive choropleth by locality, with kernel density estimation used to surface planting hotspots and gaps. Density surfaces are exported as GeoTIFF rasters for further GIS use, and every map layer follows a consistent visual language: a <code>CartoDB Positron</code> basemap, the <code>YlOrBr</code> colour ramp, and hover tooltips for per-tree detail.</p>
+      </div>
+      <div>
+        <div class="skill-block">
+          <h3>Stack</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Folium</li>
+            <li>ipyleaflet</li>
+            <li>GeoPandas</li>
+            <li>WFS</li>
+            <li>KDE</li>
+            <li>GeoTIFF</li>
+          </ul>
+        </div>
+        <a class="btn ghost" href="https://github.com/miguelif92" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <svg class="contour wrap" viewBox="0 0 980 28" preserveAspectRatio="none">
+    <path d="M0,14 Q60,24 120,14 T240,14 T360,14 T480,14 T600,14 T720,14 T840,14 T980,14"></path>
+  </svg>
+
+  <section class="wrap" id="ivi">
+    <div class="section-head">
+      <span class="eyebrow">Tropical rainforest inventory</span>
+      <h2>IVI-ForstEcol</h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <p>A tool for calculating the Important Value Index (IVI) — a standard forest ecology metric combining relative density, relative frequency and relative dominance to rank tree species by ecological importance within a plot.</p>
+        <p>Built from raw forest inventory plot data, the project structures species counts, basal area and occurrence across plots into the metrics foresters and ecologists use to compare species dominance and guide management decisions in tropical rainforest.</p>
+      </div>
+      <div>
+        <div class="skill-block">
+          <h3>Stack</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>Forest inventory</li>
+            <li>Ecology metrics</li>
+          </ul>
+        </div>
+        <a class="btn ghost" href="https://github.com/miguelif92/IVI-ForstEcol" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top: 0;">
+    <div class="card" style="max-width: 100%;">
+      <span class="field">More work</span>
+      <h3>Full repository list</h3>
+      <p>Additional repos — including web GIS experiments and CV/site source — are on GitHub.</p>
+      <a class="repo-link" href="https://github.com/miguelif92" target="_blank" rel="noopener">Visit github.com/miguelif92</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="footer-note">Bogotá &rarr; Brandenburg</span>
+    <div class="footer-links">
+      <a href="https://github.com/miguelif92" target="_blank" rel="noopener">GitHub</a>
+      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

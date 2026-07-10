@@ -1,264 +1,404 @@
-/* ── Variables ── */
+/* ============================================================
+   Miguel Salamanca — Portfolio
+   Design language: field survey / topographic map
+   ============================================================ */
+
 :root {
-  --ink: #1a1a18;
-  --muted: #5a5a52;
-  --accent: #2e5e3e;
-  --rule: #c8c4b8;
-  --bg: #f7f5f0;
-  --sidebar-bg: #edeae3;
-  --sidebar-w: 30%;
-  --gap: 0.85cm;
+  --bg: #faf9f5;
+  --paper: #f2f1ea;
+  --ink: #1f2a22;
+  --ink-soft: #4a564c;
+  --green: #3b6b4a;
+  --green-deep: #24422f;
+  --brown: #8a6a4b;
+  --blue: #2f5d8a;
+  --line: #c9cdbf;
+  --line-soft: #dfe2d8;
+
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --max-w: 980px;
 }
 
-/* ── Reset ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; }
 
-/* ── Body ── */
+html { scroll-behavior: smooth; }
+
 body {
-  background-image: url('../img/tree.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Times New Roman', times;
-  font-size: 10.5pt;
+  margin: 0;
+  background: var(--bg);
   color: var(--ink);
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── Page ── */
-.page {
-  padding: 1.25cm;
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--green-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--green); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 0.4em 0;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: var(--green);
+  display: inline-block;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / nav (map legend strip) ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
   background: var(--bg);
-  width: 21cm;
-  min-height: 29.7cm;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.brand .coord {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+nav.primary {
+  display: flex;
+  gap: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+nav.primary a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  position: relative;
+  padding: 4px 0;
+}
+
+nav.primary a.active,
+nav.primary a:hover {
+  color: var(--green-deep);
+}
+
+nav.primary a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  background: var(--green);
+}
+
+/* ---------- Contour divider (signature motif) ---------- */
+
+.contour {
+  width: 100%;
+  height: 28px;
+  display: block;
+  color: var(--line);
+}
+
+.contour path { fill: none; stroke: currentColor; stroke-width: 1; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 72px 0 56px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3rem);
+  max-width: 14ch;
+  margin-top: 0.5em;
+}
+
+.hero .role {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+
+.hero .lede {
+  max-width: 56ch;
+  margin-top: 20px;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.route-map {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.route-map .pin { fill: var(--green); }
+.route-map .path { fill: none; stroke: var(--brown); stroke-width: 1.4; stroke-dasharray: 3 4; }
+.route-map .label { font-family: var(--font-mono); font-size: 10px; fill: var(--ink-soft); }
+
+.cta-row {
+  margin-top: 36px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-decoration: none;
+  padding: 11px 20px;
+  border-radius: 2px;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.btn.primary {
+  background: var(--green-deep);
+  color: var(--bg);
+}
+
+.btn.primary:hover { background: var(--green); color: var(--bg); }
+
+.btn.ghost {
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.btn.ghost:hover { border-color: var(--green); color: var(--green-deep); }
+
+/* ---------- Section scaffolding ---------- */
+
+section { padding: 56px 0; }
+
+.section-head {
+  margin-bottom: 36px;
+}
+
+.section-head h2 { font-size: 1.6rem; }
+
+/* ---------- Project cards ---------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 26px 24px;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
 }
 
-/* ── Header ── */
-.header {
-  text-align: center;
-  padding: 1.1cm 1.2cm 0.7cm;
-  border-bottom: 1.5px solid var(--rule);
-}
-
-.header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 26pt;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  line-height: 1.1;
-}
-
-.header .tagline {
-  margin-top: 6px;
-  font-size: 9pt;
-  color: var(--muted);
-  font-weight: 300;
-  letter-spacing: 0.12em;
+.card .field {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--brown);
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-/* ── Two-column body ── */
-.body {
+.card h3 {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+
+.card p { color: var(--ink-soft); font-size: 0.98rem; flex-grow: 1; }
+
+.tags {
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 18px;
 }
 
-/* ── Sidebar ── */
-.sidebar {
-  width: 42%;
-  background: var(--sidebar-bg);
-  padding: 0.7cm var(--gap);
-  border-right: 1.5px solid var(--rule);
-  flex-shrink: 0;
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 2px;
+  color: var(--ink-soft);
 }
 
-/* ── Main ── */
-.main {
-  flex: 1;
-  padding: 0.7cm var(--gap);
-}
-
-/* ── Section headings ── */
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 9.5pt;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  border-bottom: 1.5px solid var(--accent);
-  padding-bottom: 3px;
-  margin-bottom: 8px;
-  margin-top: 16px;
-}
-
-.section-title:first-child { margin-top: 0; }
-
-/* ── Contact ── */
-.contact-item {
-  font-size: 9.5pt;
-  line-height: 1.65;
-  color: var(--ink);
-}
-
-.contact-item a {
-  color: var(--accent);
+.card .repo-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
   text-decoration: none;
+  color: var(--green-deep);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: auto;
 }
 
-.contact-item a:hover { text-decoration: underline; }
+.card .repo-link:hover { color: var(--green); }
 
-/* ── Education ── */
-.edu-entry {
+.card .repo-link::after { content: " \2192"; }
+
+/* ---------- About / CV page ---------- */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 720px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.skill-block { margin-bottom: 28px; }
+
+.skill-block h3 {
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brown);
   margin-bottom: 10px;
 }
 
-.edu-entry .degree {
-  font-weight: 600;
-  font-size: 9.5pt;
-  line-height: 1.35;
-  color: var(--ink);
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.edu-entry .years {
-  font-size: 8.5pt;
-  color: var(--accent);
-  font-weight: 600;
-  margin: 2px 0 1px;
+.skill-list li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 2px;
 }
 
-.edu-entry .institution {
-  font-size: 8.5pt;
-  color: var(--muted);
-  line-height: 1.4;
+.timeline-item {
+  border-left: 2px solid var(--line);
+  padding: 2px 0 26px 20px;
+  position: relative;
 }
 
-/* ── Skills ── */
-.skill-line {
-  font-size: 9pt;
-  line-height: 1.6;
-  margin-bottom: 3px;
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px; top: 4px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--green);
 }
 
-.skill-line strong {
-  color: var(--accent);
-  font-weight: 600;
+.timeline-item .when {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* ── Languages ── */
-.lang-item {
-  font-size: 9pt;
-  line-height: 1.65;
-  color: var(--ink);
+.timeline-item h3 { font-size: 1.05rem; margin: 6px 0 4px; }
+.timeline-item p { color: var(--ink-soft); margin: 0; font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0 48px;
+  margin-top: 40px;
 }
 
-/* ── Profile ── */
-.profile-text {
-  font-size: 9.5pt;
-  line-height: 1.65;
-  color: var(--muted);
-  font-weight: 300;
-}
-
-/* ── Experience ── */
-.exp-entry {
-  margin-bottom: 11px;
-}
-
-.exp-header {
+.footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 16px;
 }
 
-.exp-title {
-  font-weight: 700;
-  font-size: 9.5pt;
-  color: var(--ink);
+.footer-links {
+  display: flex;
+  gap: 22px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
 }
 
-.exp-dates {
-  font-size: 8.5pt;
-  color: var(--accent);
-  font-weight: 600;
-  white-space: nowrap;
+.footer-links a { color: var(--ink-soft); text-decoration: none; }
+.footer-links a:hover { color: var(--green-deep); }
+
+.footer-note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
 }
 
-.exp-org {
-  font-size: 8.5pt;
-  color: var(--muted);
-  font-style: italic;
-  margin: 1px 0 4px;
-}
-
-.exp-entry ul {
-  padding-left: 1.1em;
-  margin: 0;
-}
-
-.exp-entry li {
-  font-size: 9pt;
-  line-height: 1.55;
-  color: var(--muted);
-  margin-bottom: 2px;
-}
-
-/* ── Projects ── */
-.project-entry {
-  margin-bottom: 9px;
-}
-
-.project-title {
-  font-weight: 600;
-  font-size: 9pt;
-  color: var(--ink);
-}
-
-.project-meta {
-  font-size: 8.5pt;
-  color: var(--accent);
-  margin-bottom: 2px;
-}
-
-.project-desc {
-  font-size: 9pt;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-/* ── Signature ── */
-.signature {
-  margin-top: 18px;
-  padding-top: 8px;
-  border-top: 1px solid var(--rule);
-  font-size: 8.5pt;
-  color: var(--muted);
-}
-
-.sig-line {
-  width: 4cm;
-  height: 1px;
-  background: var(--ink);
-  margin-top: 20px;
-  margin-bottom: 3px;
-}
-
-/* ── Print ── */
-@media print {
-  body { background: none; padding: 0; }
-  .page { box-shadow: none; width: 100%; min-height: 100vh; }
+@media (max-width: 640px) {
+  nav.primary { gap: 16px; }
+  .brand .coord { display: none; }
 }
