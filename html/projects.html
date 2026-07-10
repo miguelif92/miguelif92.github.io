@@ -7,17 +7,16 @@
 <meta name="description" content="Geospatial and forestry data projects by Miguel Salamanca.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap nav-inner">
-    <a href="index.html" class="brand">Miguel Salamanca <span class="coord">04.71°N 74.07°W → 52.84°N 13.82°E</span></a>
+    <a href="../index.html" class="brand">Miguel Salamanca</a>
     <nav class="primary">
-      <a href="index.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html" class="active">Projects</a>
       <a href="https://github.com/miguelif92" target="_blank" rel="noopener">GitHub</a>
     </nav>
   </div>
@@ -36,19 +35,22 @@
 
   <section class="wrap" id="urapan">
     <div class="section-head">
-      <span class="eyebrow">Bogotá, Colombia · SoSe 2026</span>
-      <h2>Urapán Street Tree Analysis</h2>
+      <span class="eyebrow">Bogota, Colombia</span>
+      <h2>Urapán Tree Analysis</h2>
     </div>
     <div class="two-col">
       <div>
-        <p>A geospatial study of <em>Fraxinus uhdei</em> (Urapán) across Bogotá's public tree inventory, built for the Big Data coursework at HNEE. The project connects directly to the city's Urban Tree Census WFS endpoint, then moves through cleaning, spatial statistics, and visualization entirely inside remote Jupyter notebooks over SSH.</p>
-        <p>Distribution is mapped as an interactive choropleth by locality, with kernel density estimation used to surface planting hotspots and gaps. Density surfaces are exported as GeoTIFF rasters for further GIS use, and every map layer follows a consistent visual language: a <code>CartoDB Positron</code> basemap, the <code>YlOrBr</code> colour ramp, and hover tooltips for per-tree detail.</p>
+        <p>A geospatial study of <em>Fraxinus chinensis</em> (Urapán) across Bogota's public tree inventory, built for the Big Data coursework at HNEE. The project connects directly to the city's Urban Tree Census WFS endpoint, then moves through cleaning, spatial statistics, and visualization entirely inside remote Jupyter notebooks over SSH.</p>
+        <p>Distribution is mapped as an interactive choropleth by locality, with kernel density estimation used to surface planting hotspots and gaps. Density surfaces are exported as GeoTIFF rasters for further GIS use.</p>
       </div>
       <div>
         <div class="skill-block">
           <h3>Stack</h3>
           <ul class="skill-list">
             <li>Python</li>
+            <li>Seaborn</li>
+            <li>matplotlib</li>
+            <li>numpy</li>
             <li>Folium</li>
             <li>ipyleaflet</li>
             <li>GeoPandas</li>
@@ -68,7 +70,7 @@
 
   <section class="wrap" id="ivi">
     <div class="section-head">
-      <span class="eyebrow">Tropical rainforest inventory</span>
+      <span class="eyebrow">Buenaventura, Colombia</span>
       <h2>IVI-ForstEcol</h2>
     </div>
     <div class="two-col">
@@ -103,11 +105,12 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span class="footer-note">Bogotá &rarr; Brandenburg</span>
     <div class="footer-links">
       <a href="https://github.com/miguelif92" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/miguel-salamanca-rodriguez/?locale=en-US">LinkedIn</a>
+      <a href="mailto:miguelif4@gmail.com">Write me</a>
       <a href="about.html">About</a>
-      <a href="index.html">Home</a>
+      <a href="../index.html">Home</a>
     </div>
   </div>
 </footer>
