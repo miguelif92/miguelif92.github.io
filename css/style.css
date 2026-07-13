@@ -402,3 +402,27 @@ footer {
   nav.primary { gap: 16px; }
   .brand .coord { display: none; }
 }
+
+.section-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  padding: 40px 32px;
+  overflow: hidden;
+}
+
+/* translucent paper overlay so text stays readable */
+.section-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 249, 245, 0.88); /* var(--bg) at 88% opacity */
+  z-index: 0;
+}
+
+/* keep actual content above the overlay */
+.section-bg > * {
+  position: relative;
+  z-index: 1;
+}
