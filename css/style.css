@@ -4,16 +4,16 @@
    ============================================================ */
 
 :root {
-  --bg: #faf9f5;
-  --paper: #f2f1ea;
+  --bg: #fbf4e2;
+  --paper: #f4ffd9;
   --ink: #1f2a22;
   --ink-soft: #4a564c;
   --green: #3b6b4a;
   --green-deep: #24422f;
   --brown: #8a6a4b;
   --blue: #2f5d8a;
-  --line: #c9cdbf;
-  --line-soft: #dfe2d8;
+  --line: #a5b187;
+  --line-soft: #e6ffaa;
 
   --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -415,7 +415,7 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(250, 249, 245, 0.88);
+  background: rgba(250, 249, 245, 0.81);
   z-index: 0;
 }
 .section-bg > * {
@@ -435,7 +435,7 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(250, 249, 245, 0.88);
+  background: rgba(250, 249, 245, 0.81);
   z-index: 0;
 }
 .main-bg > * {
