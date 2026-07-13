@@ -422,3 +422,23 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+.main-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  padding: 40px 32px;
+  overflow: hidden;
+}
+.main-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 249, 245, 0.88);
+  z-index: 0;
+}
+.main-bg > * {
+  position: relative;
+  z-index: 1;
+}
