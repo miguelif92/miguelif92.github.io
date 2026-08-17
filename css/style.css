@@ -189,7 +189,7 @@ nav.primary a.active::after {
 .route-map {
   margin-top: 40px;
   width: 100%;
-  max-width: 560px;
+  max-width: 800px;
 }
 
 .route-map .pin { fill: var(--green); }
