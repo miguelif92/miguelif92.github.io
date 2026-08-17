@@ -188,7 +188,7 @@ nav.primary a.active::after {
 
 .route-map {
   margin-top: 40px;
-  width: 100%;
+  width: 150%;
   max-width: 900px;
 }
 
