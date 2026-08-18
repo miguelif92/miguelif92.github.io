@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_eeaeda7045e3dccab0b97e5dac280b93 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_eeaeda7045e3dccab0b97e5dac280b93" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_eeaeda7045e3dccab0b97e5dac280b93 = L.map(
+                "map_eeaeda7045e3dccab0b97e5dac280b93",
+                {
+                    center: [52.88024999028784, 13.840027205854573],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_591aacc7724b38eb9b764c6cc54068aa = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_591aacc7724b38eb9b764c6cc54068aa.addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+        
+    
+        function geo_json_c612f2645ecc0610d5662c3807ef1787_styler(feature) {
+            switch(feature.properties.id) {
+                default:
+                    return {"color": "#ff0000", "fillOpacity": 0, "weight": 2};
+            }
+        }
+
+        function geo_json_c612f2645ecc0610d5662c3807ef1787_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c612f2645ecc0610d5662c3807ef1787 = L.geoJson(null, {
+                onEachFeature: geo_json_c612f2645ecc0610d5662c3807ef1787_onEachFeature,
+            
+                style: geo_json_c612f2645ecc0610d5662c3807ef1787_styler,
+            ...{
+}
+        });
+
+        function geo_json_c612f2645ecc0610d5662c3807ef1787_add (data) {
+            geo_json_c612f2645ecc0610d5662c3807ef1787
+                .addData(data);
+        }
+            $.ajax("aoi_wgs84.geojson", {dataType: 'json', async: false})
+                .done(geo_json_c612f2645ecc0610d5662c3807ef1787_add);
+
+        
+    
+            geo_json_c612f2645ecc0610d5662c3807ef1787.addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+        
+    
+        function geo_json_bee073af82d9de1f4496f79e25479ae8_styler(feature) {
+            switch(feature.properties.id) {
+                default:
+                    return {"color": "#00ffff", "fillOpacity": 0, "weight": 2};
+            }
+        }
+
+        function geo_json_bee073af82d9de1f4496f79e25479ae8_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bee073af82d9de1f4496f79e25479ae8 = L.geoJson(null, {
+                onEachFeature: geo_json_bee073af82d9de1f4496f79e25479ae8_onEachFeature,
+            
+                style: geo_json_bee073af82d9de1f4496f79e25479ae8_styler,
+            ...{
+}
+        });
+
+        function geo_json_bee073af82d9de1f4496f79e25479ae8_add (data) {
+            geo_json_bee073af82d9de1f4496f79e25479ae8
+                .addData(data);
+        }
+            $.ajax("plot_wgs84.geojson", {dataType: 'json', async: false})
+                .done(geo_json_bee073af82d9de1f4496f79e25479ae8_add);
+
+        
+    
+            geo_json_bee073af82d9de1f4496f79e25479ae8.addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+        
+    
+        function geo_json_d2ca56470165050f1b867f1797639bbf_styler(feature) {
+            switch(feature.properties.id) {
+                case "0": case "40": case "131": case "443": case "497": case "539": case "673": case "769": case "777": case "794": case "817": case "852": case "881": case "899": case "906": case "946": case "962": case "1015": case "1026": 
+                    return {"color": "#d5e82fff", "fillColor": "#d5e82fff", "fillOpacity": 0.5, "weight": 1};
+                case "1": case "516": case "662": case "703": case "814": case "827": case "845": case "879": case "896": case "972": 
+                    return {"color": "#e0f031ff", "fillColor": "#e0f031ff", "fillOpacity": 0.5, "weight": 1};
+                case "2": case "38": case "125": case "573": case "581": case "778": case "810": case "889": case "902": case "919": case "937": 
+                    return {"color": "#c0d82aff", "fillColor": "#c0d82aff", "fillOpacity": 0.5, "weight": 1};
+                case "3": case "178": case "184": case "292": case "546": 
+                    return {"color": "#c79920ff", "fillColor": "#c79920ff", "fillOpacity": 0.5, "weight": 1};
+                case "4": case "177": case "226": case "252": case "253": case "261": case "281": case "342": case "396": case "491": case "558": case "751": case "786": case "958": case "1007": 
+                    return {"color": "#c89a20ff", "fillColor": "#c89a20ff", "fillOpacity": 0.5, "weight": 1};
+                case "5": case "160": case "195": case "438": 
+                    return {"color": "#b56e17ff", "fillColor": "#b56e17ff", "fillOpacity": 0.5, "weight": 1};
+                case "6": case "25": case "33": case "82": case "483": case "512": case "556": case "689": case "721": case "983": 
+                    return {"color": "#deef31ff", "fillColor": "#deef31ff", "fillOpacity": 0.5, "weight": 1};
+                case "7": case "102": case "435": 
+                    return {"color": "#b06315ff", "fillColor": "#b06315ff", "fillOpacity": 0.5, "weight": 1};
+                case "8": case "301": case "365": case "608": 
+                    return {"color": "#f0f834ff", "fillColor": "#f0f834ff", "fillOpacity": 0.5, "weight": 1};
+                case "9": case "465": case "472": 
+                    return {"color": "#c4921fff", "fillColor": "#c4921fff", "fillOpacity": 0.5, "weight": 1};
+                case "10": case "100": case "107": case "320": case "507": case "541": case "595": case "760": case "818": case "854": case "864": case "918": 
+                    return {"color": "#cee22dff", "fillColor": "#cee22dff", "fillOpacity": 0.5, "weight": 1};
+                case "11": case "98": case "393": case "457": case "705": case "720": case "748": case "792": case "813": case "872": case "897": case "926": 
+                    return {"color": "#c6dc2cff", "fillColor": "#c6dc2cff", "fillOpacity": 0.5, "weight": 1};
+                case "12": case "272": case "704": 
+                    return {"color": "#ecee32ff", "fillColor": "#ecee32ff", "fillOpacity": 0.5, "weight": 1};
+                case "13": case "51": case "86": case "105": case "484": case "531": case "574": case "670": case "677": case "780": case "799": case "832": case "842": case "921": case "922": case "1027": 
+                    return {"color": "#c8de2cff", "fillColor": "#c8de2cff", "fillOpacity": 0.5, "weight": 1};
+                case "14": case "19": case "42": case "117": case "373": case "461": case "519": case "551": case "833": case "885": case "890": case "894": case "907": case "931": case "968": 
+                    return {"color": "#d4e72fff", "fillColor": "#d4e72fff", "fillOpacity": 0.5, "weight": 1};
+                case "15": case "274": case "403": case "910": 
+                    return {"color": "#e9f733ff", "fillColor": "#e9f733ff", "fillOpacity": 0.5, "weight": 1};
+                case "16": case "143": case "156": case "351": case "724": 
+                    return {"color": "#ddcb2bff", "fillColor": "#ddcb2bff", "fillOpacity": 0.5, "weight": 1};
+                case "17": case "427": case "868": 
+                    return {"color": "#e3f332ff", "fillColor": "#e3f332ff", "fillOpacity": 0.5, "weight": 1};
+                case "18": case "332": case "445": case "686": case "878": 
+                    return {"color": "#e6f533ff", "fillColor": "#e6f533ff", "fillOpacity": 0.5, "weight": 1};
+                case "20": case "413": case "424": case "771": case "908": 
+                    return {"color": "#f2fc35ff", "fillColor": "#f2fc35ff", "fillOpacity": 0.5, "weight": 1};
+                case "21": case "48": case "211": case "451": case "518": 
+                    return {"color": "#bd811bff", "fillColor": "#bd811bff", "fillOpacity": 0.5, "weight": 1};
+                case "22": case "87": case "94": case "96": case "97": case "492": case "565": case "610": case "747": case "797": case "804": case "829": case "901": case "950": case "960": 
+                    return {"color": "#cbe02dff", "fillColor": "#cbe02dff", "fillOpacity": 0.5, "weight": 1};
+                case "23": case "121": case "271": case "382": case "579": 
+                    return {"color": "#e7e330ff", "fillColor": "#e7e330ff", "fillOpacity": 0.5, "weight": 1};
+                case "24": case "43": case "471": 
+                    return {"color": "#f1fb35ff", "fillColor": "#f1fb35ff", "fillOpacity": 0.5, "weight": 1};
+                case "26": case "206": case "384": case "452": case "469": case "486": case "828": 
+                    return {"color": "#bc7e1aff", "fillColor": "#bc7e1aff", "fillOpacity": 0.5, "weight": 1};
+                case "27": case "101": case "433": case "500": case "679": case "876": 
+                    return {"color": "#dbed30ff", "fillColor": "#dbed30ff", "fillOpacity": 0.5, "weight": 1};
+                case "28": case "54": case "241": case "306": 
+                    return {"color": "#e5de2fff", "fillColor": "#e5de2fff", "fillOpacity": 0.5, "weight": 1};
+                case "29": case "185": case "213": case "331": case "337": case "446": case "463": 
+                    return {"color": "#cea923ff", "fillColor": "#cea923ff", "fillOpacity": 0.5, "weight": 1};
+                case "30": case "188": case "222": case "299": case "318": case "379": case "422": 
+                    return {"color": "#cda523ff", "fillColor": "#cda523ff", "fillOpacity": 0.5, "weight": 1};
+                case "31": case "149": case "154": case "165": case "174": case "449": 
+                    return {"color": "#ba7919ff", "fillColor": "#ba7919ff", "fillOpacity": 0.5, "weight": 1};
+                case "32": case "91": case "825": case "861": case "956": 
+                    return {"color": "#eaf834ff", "fillColor": "#eaf834ff", "fillOpacity": 0.5, "weight": 1};
+                case "34": case "115": case "411": case "482": case "555": case "680": case "893": case "927": 
+                    return {"color": "#ddee31ff", "fillColor": "#ddee31ff", "fillOpacity": 0.5, "weight": 1};
+                case "35": case "41": 
+                    return {"color": "#e4db2eff", "fillColor": "#e4db2eff", "fillOpacity": 0.5, "weight": 1};
+                case "36": case "294": case "392": case "649": case "667": 
+                    return {"color": "#d7bd28ff", "fillColor": "#d7bd28ff", "fillOpacity": 0.5, "weight": 1};
+                case "37": case "155": case "171": case "183": case "381": case "508": case "840": case "977": 
+                    return {"color": "#b57017ff", "fillColor": "#b57017ff", "fillOpacity": 0.5, "weight": 1};
+                case "39": case "237": case "270": case "279": case "297": case "302": case "335": case "336": case "371": case "494": case "740": case "764": case "781": 
+                    return {"color": "#cfaa24ff", "fillColor": "#cfaa24ff", "fillOpacity": 0.5, "weight": 1};
+                case "44": case "113": case "502": case "582": case "587": 
+                    return {"color": "#af6114ff", "fillColor": "#af6114ff", "fillOpacity": 0.5, "weight": 1};
+                case "45": case "127": case "142": case "236": 
+                    return {"color": "#e2d82dff", "fillColor": "#e2d82dff", "fillOpacity": 0.5, "weight": 1};
+                case "46": case "85": case "641": case "691": case "793": case "803": case "844": case "892": 
+                    return {"color": "#c3da2bff", "fillColor": "#c3da2bff", "fillOpacity": 0.5, "weight": 1};
+                case "47": case "134": case "511": 
+                    return {"color": "#eff433ff", "fillColor": "#eff433ff", "fillOpacity": 0.5, "weight": 1};
+                case "49": case "989": 
+                    return {"color": "#921e06ff", "fillColor": "#921e06ff", "fillOpacity": 0.5, "weight": 1};
+                case "50": case "485": case "576": case "732": case "959": 
+                    return {"color": "#daec30ff", "fillColor": "#daec30ff", "fillOpacity": 0.5, "weight": 1};
+                case "52": case "888": case "993": case "1020": 
+                    return {"color": "#be831bff", "fillColor": "#be831bff", "fillOpacity": 0.5, "weight": 1};
+                case "53": case "68": case "70": case "260": case "410": case "737": 
+                    return {"color": "#f1f934ff", "fillColor": "#f1f934ff", "fillOpacity": 0.5, "weight": 1};
+                case "55": case "161": case "635": case "975": case "1002": 
+                    return {"color": "#a3450eff", "fillColor": "#a3450eff", "fillOpacity": 0.5, "weight": 1};
+                case "56": case "947": case "1021": 
+                    return {"color": "#a8c525ff", "fillColor": "#a8c525ff", "fillOpacity": 0.5, "weight": 1};
+                case "57": case "223": case "242": case "293": case "304": case "307": case "350": case "360": case "401": case "542": case "660": case "925": 
+                    return {"color": "#d3b526ff", "fillColor": "#d3b526ff", "fillOpacity": 0.5, "weight": 1};
+                case "58": case "251": case "333": case "341": case "664": 
+                    return {"color": "#dfd02cff", "fillColor": "#dfd02cff", "fillOpacity": 0.5, "weight": 1};
+                case "59": case "129": 
+                    return {"color": "#e0d32cff", "fillColor": "#e0d32cff", "fillOpacity": 0.5, "weight": 1};
+                case "60": case "543": case "636": case "644": case "693": case "752": case "782": case "815": case "819": case "830": case "855": case "867": case "920": case "933": case "934": case "935": case "988": 
+                    return {"color": "#c9df2cff", "fillColor": "#c9df2cff", "fillOpacity": 0.5, "weight": 1};
+                case "61": case "415": case "692": case "768": case "770": case "773": case "783": case "800": case "846": case "851": case "857": case "997": case "1028": case "1034": 
+                    return {"color": "#bdd52aff", "fillColor": "#bdd52aff", "fillOpacity": 0.5, "weight": 1};
+                case "62": case "230": case "243": case "244": case "653": case "696": 
+                    return {"color": "#e3da2eff", "fillColor": "#e3da2eff", "fillOpacity": 0.5, "weight": 1};
+                case "63": case "130": case "220": case "257": case "310": case "353": case "659": case "731": case "763": case "944": 
+                    return {"color": "#e2d62dff", "fillColor": "#e2d62dff", "fillOpacity": 0.5, "weight": 1};
+                case "64": case "460": case "707": case "745": case "798": case "807": case "942": 
+                    return {"color": "#d8ea30ff", "fillColor": "#d8ea30ff", "fillOpacity": 0.5, "weight": 1};
+                case "65": case "487": case "524": case "548": case "640": case "688": case "701": case "742": case "749": case "758": case "761": case "790": case "841": case "877": case "887": case "912": case "930": case "954": 
+                    return {"color": "#bfd72aff", "fillColor": "#bfd72aff", "fillOpacity": 0.5, "weight": 1};
+                case "66": case "120": case "159": case "170": case "204": case "488": 
+                    return {"color": "#b46d17ff", "fillColor": "#b46d17ff", "fillOpacity": 0.5, "weight": 1};
+                case "67": case "295": case "672": case "687": 
+                    return {"color": "#e7f633ff", "fillColor": "#e7f633ff", "fillOpacity": 0.5, "weight": 1};
+                case "69": case "76": 
+                    return {"color": "#8f1604ff", "fillColor": "#8f1604ff", "fillOpacity": 0.5, "weight": 1};
+                case "71": case "202": case "533": case "584": case "1018": 
+                    return {"color": "#ae5e14ff", "fillColor": "#ae5e14ff", "fillOpacity": 0.5, "weight": 1};
+                case "72": case "628": 
+                    return {"color": "#a64b10ff", "fillColor": "#a64b10ff", "fillOpacity": 0.5, "weight": 1};
+                case "73": case "603": case "642": 
+                    return {"color": "#ab5612ff", "fillColor": "#ab5612ff", "fillOpacity": 0.5, "weight": 1};
+                case "74": case "153": case "157": case "348": case "489": case "501": case "575": case "588": case "592": 
+                    return {"color": "#b87619ff", "fillColor": "#b87619ff", "fillOpacity": 0.5, "weight": 1};
+                case "75": case "1005": 
+                    return {"color": "#a54a0fff", "fillColor": "#a54a0fff", "fillOpacity": 0.5, "weight": 1};
+                case "77": case "268": case "313": case "334": case "462": 
+                    return {"color": "#d2b225ff", "fillColor": "#d2b225ff", "fillOpacity": 0.5, "weight": 1};
+                case "78": case "456": case "553": case "594": case "710": case "779": case "1017": 
+                    return {"color": "#b9d229ff", "fillColor": "#b9d229ff", "fillOpacity": 0.5, "weight": 1};
+                case "79": case "999": 
+                    return {"color": "#a2430eff", "fillColor": "#a2430eff", "fillOpacity": 0.5, "weight": 1};
+                case "80": case "622": 
+                    return {"color": "#972a09ff", "fillColor": "#972a09ff", "fillOpacity": 0.5, "weight": 1};
+                case "81": case "88": case "315": case "406": case "426": case "481": case "505": case "510": case "525": case "529": case "676": case "685": case "690": case "718": case "728": case "821": case "869": case "886": case "898": case "941": 
+                    return {"color": "#c2d92bff", "fillColor": "#c2d92bff", "fillOpacity": 0.5, "weight": 1};
+                case "83": 
+                    return {"color": "#074601ff", "fillColor": "#074601ff", "fillOpacity": 0.5, "weight": 1};
+                case "84": case "544": 
+                    return {"color": "#96b721ff", "fillColor": "#96b721ff", "fillOpacity": 0.5, "weight": 1};
+                case "89": case "903": 
+                    return {"color": "#9cbc22ff", "fillColor": "#9cbc22ff", "fillOpacity": 0.5, "weight": 1};
+                case "90": 
+                    return {"color": "#83a81dff", "fillColor": "#83a81dff", "fillOpacity": 0.5, "weight": 1};
+                case "92": case "473": case "715": case "726": case "735": case "802": case "816": case "836": case "860": case "976": case "1000": 
+                    return {"color": "#bad329ff", "fillColor": "#bad329ff", "fillOpacity": 0.5, "weight": 1};
+                case "93": case "776": case "837": case "873": case "880": case "882": case "953": 
+                    return {"color": "#d1e52eff", "fillColor": "#d1e52eff", "fillOpacity": 0.5, "weight": 1};
+                case "95": case "599": case "625": 
+                    return {"color": "#ad5b13ff", "fillColor": "#ad5b13ff", "fillOpacity": 0.5, "weight": 1};
+                case "99": case "152": case "254": case "602": case "981": 
+                    return {"color": "#b97819ff", "fillColor": "#b97819ff", "fillOpacity": 0.5, "weight": 1};
+                case "103": case "249": case "372": case "924": 
+                    return {"color": "#f2fe35ff", "fillColor": "#f2fe35ff", "fillOpacity": 0.5, "weight": 1};
+                case "104": 
+                    return {"color": "#992d09ff", "fillColor": "#992d09ff", "fillOpacity": 0.5, "weight": 1};
+                case "106": 
+                    return {"color": "#942207ff", "fillColor": "#942207ff", "fillOpacity": 0.5, "weight": 1};
+                case "108": case "118": case "440": case "458": case "526": case "550": case "557": case "562": case "596": case "708": case "809": case "823": case "826": case "847": case "875": case "905": case "970": 
+                    return {"color": "#cce12dff", "fillColor": "#cce12dff", "fillOpacity": 0.5, "weight": 1};
+                case "109": case "166": case "207": case "503": case "552": case "1025": 
+                    return {"color": "#b36916ff", "fillColor": "#b36916ff", "fillOpacity": 0.5, "weight": 1};
+                case "110": case "618": case "637": case "1014": 
+                    return {"color": "#a64d10ff", "fillColor": "#a64d10ff", "fillOpacity": 0.5, "weight": 1};
+                case "111": 
+                    return {"color": "#870401ff", "fillColor": "#870401ff", "fillOpacity": 0.5, "weight": 1};
+                case "112": case "750": case "767": case "806": case "895": case "957": 
+                    return {"color": "#bcd429ff", "fillColor": "#bcd429ff", "fillOpacity": 0.5, "weight": 1};
+                case "114": case "709": case "727": case "928": case "936": case "964": 
+                    return {"color": "#b7d128ff", "fillColor": "#b7d128ff", "fillOpacity": 0.5, "weight": 1};
+                case "116": case "219": case "352": case "358": case "368": case "408": case "466": case "477": case "479": case "568": case "756": case "784": 
+                    return {"color": "#c5941fff", "fillColor": "#c5941fff", "fillOpacity": 0.5, "weight": 1};
+                case "119": case "418": case "447": case "514": case "530": case "572": case "717": case "723": case "729": case "730": case "788": case "820": case "822": case "831": case "853": case "866": case "891": case "963": 
+                    return {"color": "#cfe32eff", "fillColor": "#cfe32eff", "fillOpacity": 0.5, "weight": 1};
+                case "122": case "233": case "300": case "319": case "340": case "390": case "663": 
+                    return {"color": "#d3b426ff", "fillColor": "#d3b426ff", "fillOpacity": 0.5, "weight": 1};
+                case "123": case "569": case "571": case "706": 
+                    return {"color": "#e4f432ff", "fillColor": "#e4f432ff", "fillOpacity": 0.5, "weight": 1};
+                case "124": case "327": case "431": case "537": 
+                    return {"color": "#bf861cff", "fillColor": "#bf861cff", "fillOpacity": 0.5, "weight": 1};
+                case "126": case "147": case "151": case "245": case "263": case "344": case "414": case "416": case "434": case "589": 
+                    return {"color": "#c4911eff", "fillColor": "#c4911eff", "fillOpacity": 0.5, "weight": 1};
+                case "128": case "216": case "661": 
+                    return {"color": "#ecfa34ff", "fillColor": "#ecfa34ff", "fillOpacity": 0.5, "weight": 1};
+                case "132": case "399": case "453": case "521": case "759": case "863": case "939": case "969": case "986": case "987": case "1006": 
+                    return {"color": "#c5db2bff", "fillColor": "#c5db2bff", "fillOpacity": 0.5, "weight": 1};
+                case "133": case "654": case "674": 
+                    return {"color": "#e4dd2eff", "fillColor": "#e4dd2eff", "fillOpacity": 0.5, "weight": 1};
+                case "135": case "560": 
+                    return {"color": "#ebed32ff", "fillColor": "#ebed32ff", "fillOpacity": 0.5, "weight": 1};
+                case "136": case "150": case "240": case "248": case "329": case "389": 
+                    return {"color": "#c69720ff", "fillColor": "#c69720ff", "fillOpacity": 0.5, "weight": 1};
+                case "137": case "255": case "258": case "605": case "678": 
+                    return {"color": "#dcca2aff", "fillColor": "#dcca2aff", "fillOpacity": 0.5, "weight": 1};
+                case "138": case "246": case "467": case "527": case "586": 
+                    return {"color": "#c6961fff", "fillColor": "#c6961fff", "fillOpacity": 0.5, "weight": 1};
+                case "139": case "290": case "321": case "357": case "858": 
+                    return {"color": "#d0ad24ff", "fillColor": "#d0ad24ff", "fillOpacity": 0.5, "weight": 1};
+                case "140": case "163": case "619": case "629": 
+                    return {"color": "#a85211ff", "fillColor": "#a85211ff", "fillOpacity": 0.5, "weight": 1};
+                case "141": case "145": case "532": case "966": 
+                    return {"color": "#b77418ff", "fillColor": "#b77418ff", "fillOpacity": 0.5, "weight": 1};
+                case "144": 
+                    return {"color": "#a03d0dff", "fillColor": "#a03d0dff", "fillOpacity": 0.5, "weight": 1};
+                case "146": 
+                    return {"color": "#32680bff", "fillColor": "#32680bff", "fillOpacity": 0.5, "weight": 1};
+                case "148": case "196": case "303": case "420": case "493": case "498": case "578": 
+                    return {"color": "#c0871cff", "fillColor": "#c0871cff", "fillOpacity": 0.5, "weight": 1};
+                case "158": case "209": case "450": case "566": case "631": case "639": 
+                    return {"color": "#af6014ff", "fillColor": "#af6014ff", "fillOpacity": 0.5, "weight": 1};
+                case "162": case "355": case "979": 
+                    return {"color": "#c38f1eff", "fillColor": "#c38f1eff", "fillOpacity": 0.5, "weight": 1};
+                case "164": case "167": case "173": case "330": case "495": case "517": case "627": 
+                    return {"color": "#ba7b1aff", "fillColor": "#ba7b1aff", "fillOpacity": 0.5, "weight": 1};
+                case "168": case "229": case "824": 
+                    return {"color": "#cca422ff", "fillColor": "#cca422ff", "fillOpacity": 0.5, "weight": 1};
+                case "169": case "194": case "509": case "536": case "617": 
+                    return {"color": "#b67118ff", "fillColor": "#b67118ff", "fillOpacity": 0.5, "weight": 1};
+                case "172": case "179": case "182": case "190": case "197": case "580": case "967": 
+                    return {"color": "#bb7c1aff", "fillColor": "#bb7c1aff", "fillOpacity": 0.5, "weight": 1};
+                case "175": case "181": case "378": case "398": case "405": case "428": case "506": case "801": 
+                    return {"color": "#ca9f21ff", "fillColor": "#ca9f21ff", "fillOpacity": 0.5, "weight": 1};
+                case "176": case "316": case "421": case "459": case "468": case "871": 
+                    return {"color": "#c28c1dff", "fillColor": "#c28c1dff", "fillOpacity": 0.5, "weight": 1};
+                case "180": case "326": case "561": 
+                    return {"color": "#cda723ff", "fillColor": "#cda723ff", "fillOpacity": 0.5, "weight": 1};
+                case "186": case "191": case "370": case "417": case "429": case "612": case "856": 
+                    return {"color": "#be841cff", "fillColor": "#be841cff", "fillOpacity": 0.5, "weight": 1};
+                case "187": case "208": case "324": case "475": case "476": case "700": 
+                    return {"color": "#c0891dff", "fillColor": "#c0891dff", "fillOpacity": 0.5, "weight": 1};
+                case "189": case "277": case "366": case "645": 
+                    return {"color": "#cba222ff", "fillColor": "#cba222ff", "fillOpacity": 0.5, "weight": 1};
+                case "192": case "362": case "407": case "412": case "504": case "600": 
+                    return {"color": "#c28e1eff", "fillColor": "#c28e1eff", "fillOpacity": 0.5, "weight": 1};
+                case "193": case "563": case "607": 
+                    return {"color": "#b16515ff", "fillColor": "#b16515ff", "fillOpacity": 0.5, "weight": 1};
+                case "198": case "200": 
+                    return {"color": "#aa5512ff", "fillColor": "#aa5512ff", "fillOpacity": 0.5, "weight": 1};
+                case "199": case "547": 
+                    return {"color": "#b36b16ff", "fillColor": "#b36b16ff", "fillOpacity": 0.5, "weight": 1};
+                case "201": case "597": case "604": case "620": 
+                    return {"color": "#a95311ff", "fillColor": "#a95311ff", "fillOpacity": 0.5, "weight": 1};
+                case "203": case "522": 
+                    return {"color": "#b26816ff", "fillColor": "#b26816ff", "fillOpacity": 0.5, "weight": 1};
+                case "205": case "374": case "490": case "606": case "1031": 
+                    return {"color": "#b77318ff", "fillColor": "#b77318ff", "fillOpacity": 0.5, "weight": 1};
+                case "210": case "615": case "1011": 
+                    return {"color": "#ab5812ff", "fillColor": "#ab5812ff", "fillOpacity": 0.5, "weight": 1};
+                case "212": case "250": case "283": case "322": case "385": 
+                    return {"color": "#e0d22cff", "fillColor": "#e0d22cff", "fillOpacity": 0.5, "weight": 1};
+                case "214": case "218": case "265": case "273": case "376": 
+                    return {"color": "#decf2bff", "fillColor": "#decf2bff", "fillOpacity": 0.5, "weight": 1};
+                case "215": case "288": case "499": case "515": case "538": case "585": case "593": 
+                    return {"color": "#bc7f1bff", "fillColor": "#bc7f1bff", "fillOpacity": 0.5, "weight": 1};
+                case "217": case "239": case "305": case "359": case "695": case "712": 
+                    return {"color": "#d6bc27ff", "fillColor": "#d6bc27ff", "fillOpacity": 0.5, "weight": 1};
+                case "221": case "267": case "349": case "409": case "711": case "789": 
+                    return {"color": "#d8bf28ff", "fillColor": "#d8bf28ff", "fillOpacity": 0.5, "weight": 1};
+                case "224": case "308": case "361": case "648": case "650": case "651": case "722": case "805": 
+                    return {"color": "#d5b827ff", "fillColor": "#d5b827ff", "fillOpacity": 0.5, "weight": 1};
+                case "225": case "285": case "354": case "364": case "437": case "454": case "734": case "755": case "795": case "812": case "835": case "843": 
+                    return {"color": "#d1b025ff", "fillColor": "#d1b025ff", "fillOpacity": 0.5, "weight": 1};
+                case "227": case "278": 
+                    return {"color": "#d1af25ff", "fillColor": "#d1af25ff", "fillOpacity": 0.5, "weight": 1};
+                case "228": 
+                    return {"color": "#014200ff", "fillColor": "#014200ff", "fillOpacity": 0.5, "weight": 1};
+                case "231": case "282": case "291": case "369": case "699": case "850": 
+                    return {"color": "#d5ba27ff", "fillColor": "#d5ba27ff", "fillOpacity": 0.5, "weight": 1};
+                case "232": case "646": case "682": 
+                    return {"color": "#dac529ff", "fillColor": "#dac529ff", "fillOpacity": 0.5, "weight": 1};
+                case "234": case "275": case "367": case "623": case "791": 
+                    return {"color": "#c99e21ff", "fillColor": "#c99e21ff", "fillOpacity": 0.5, "weight": 1};
+                case "235": case "311": case "430": case "923": 
+                    return {"color": "#d4b726ff", "fillColor": "#d4b726ff", "fillOpacity": 0.5, "weight": 1};
+                case "238": 
+                    return {"color": "#054501ff", "fillColor": "#054501ff", "fillOpacity": 0.5, "weight": 1};
+                case "247": case "262": case "286": case "375": case "383": 
+                    return {"color": "#dbc72aff", "fillColor": "#dbc72aff", "fillOpacity": 0.5, "weight": 1};
+                case "256": case "439": 
+                    return {"color": "#d9c229ff", "fillColor": "#d9c229ff", "fillOpacity": 0.5, "weight": 1};
+                case "259": case "665": 
+                    return {"color": "#edf032ff", "fillColor": "#edf032ff", "fillOpacity": 0.5, "weight": 1};
+                case "264": case "404": case "540": case "668": case "834": 
+                    return {"color": "#f3fe35ff", "fillColor": "#f3fe35ff", "fillOpacity": 0.5, "weight": 1};
+                case "266": case "284": 
+                    return {"color": "#e9e630ff", "fillColor": "#e9e630ff", "fillOpacity": 0.5, "weight": 1};
+                case "269": case "309": case "314": case "658": 
+                    return {"color": "#dac329ff", "fillColor": "#dac329ff", "fillOpacity": 0.5, "weight": 1};
+                case "276": case "395": 
+                    return {"color": "#edf133ff", "fillColor": "#edf133ff", "fillOpacity": 0.5, "weight": 1};
+                case "280": case "652": case "666": case "684": 
+                    return {"color": "#e6e02fff", "fillColor": "#e6e02fff", "fillOpacity": 0.5, "weight": 1};
+                case "287": case "328": case "356": case "419": case "423": case "714": 
+                    return {"color": "#cfac24ff", "fillColor": "#cfac24ff", "fillOpacity": 0.5, "weight": 1};
+                case "289": case "296": case "317": case "346": case "535": case "757": case "909": 
+                    return {"color": "#d8c028ff", "fillColor": "#d8c028ff", "fillOpacity": 0.5, "weight": 1};
+                case "298": case "325": 
+                    return {"color": "#decd2bff", "fillColor": "#decd2bff", "fillOpacity": 0.5, "weight": 1};
+                case "312": 
+                    return {"color": "#b16615ff", "fillColor": "#b16615ff", "fillOpacity": 0.5, "weight": 1};
+                case "323": case "656": case "675": 
+                    return {"color": "#dcc82aff", "fillColor": "#dcc82aff", "fillOpacity": 0.5, "weight": 1};
+                case "338": case "719": case "736": 
+                    return {"color": "#b1cc27ff", "fillColor": "#b1cc27ff", "fillOpacity": 0.5, "weight": 1};
+                case "339": case "559": case "591": case "626": case "630": case "990": 
+                    return {"color": "#ad5d13ff", "fillColor": "#ad5d13ff", "fillOpacity": 0.5, "weight": 1};
+                case "343": case "513": case "929": 
+                    return {"color": "#e8e530ff", "fillColor": "#e8e530ff", "fillOpacity": 0.5, "weight": 1};
+                case "345": 
+                    return {"color": "#114f03ff", "fillColor": "#114f03ff", "fillOpacity": 0.5, "weight": 1};
+                case "347": 
+                    return {"color": "#0b4a02ff", "fillColor": "#0b4a02ff", "fillOpacity": 0.5, "weight": 1};
+                case "363": 
+                    return {"color": "#8aae1eff", "fillColor": "#8aae1eff", "fillOpacity": 0.5, "weight": 1};
+                case "377": case "380": case "448": case "523": case "716": case "753": case "775": case "904": case "917": case "945": case "1004": case "1013": 
+                    return {"color": "#d2e62eff", "fillColor": "#d2e62eff", "fillOpacity": 0.5, "weight": 1};
+                case "386": case "388": case "432": case "762": case "772": case "978": 
+                    return {"color": "#edfb34ff", "fillColor": "#edfb34ff", "fillOpacity": 0.5, "weight": 1};
+                case "387": case "391": case "400": case "474": case "564": 
+                    return {"color": "#c99c21ff", "fillColor": "#c99c21ff", "fillOpacity": 0.5, "weight": 1};
+                case "394": case "455": case "774": 
+                    return {"color": "#cba122ff", "fillColor": "#cba122ff", "fillOpacity": 0.5, "weight": 1};
+                case "397": case "839": 
+                    return {"color": "#a4c124ff", "fillColor": "#a4c124ff", "fillOpacity": 0.5, "weight": 1};
+                case "402": 
+                    return {"color": "#e7e12fff", "fillColor": "#e7e12fff", "fillOpacity": 0.5, "weight": 1};
+                case "425": case "545": case "985": 
+                    return {"color": "#c18b1dff", "fillColor": "#c18b1dff", "fillOpacity": 0.5, "weight": 1};
+                case "436": case "766": case "785": case "787": case "874": case "1012": 
+                    return {"color": "#d7e92fff", "fillColor": "#d7e92fff", "fillOpacity": 0.5, "weight": 1};
+                case "441": case "838": case "984": case "1033": 
+                    return {"color": "#adc826ff", "fillColor": "#adc826ff", "fillOpacity": 0.5, "weight": 1};
+                case "442": case "464": case "470": case "598": case "796": case "870": 
+                    return {"color": "#b4ce28ff", "fillColor": "#b4ce28ff", "fillOpacity": 0.5, "weight": 1};
+                case "444": case "811": case "862": case "915": case "965": case "971": 
+                    return {"color": "#b3cd27ff", "fillColor": "#b3cd27ff", "fillOpacity": 0.5, "weight": 1};
+                case "478": case "647": 
+                    return {"color": "#024300ff", "fillColor": "#024300ff", "fillOpacity": 0.5, "weight": 1};
+                case "480": case "754": case "765": case "848": case "859": case "913": case "952": case "1009": case "1010": case "1030": case "1035": 
+                    return {"color": "#b6cf28ff", "fillColor": "#b6cf28ff", "fillOpacity": 0.5, "weight": 1};
+                case "496": case "577": case "614": case "671": case "943": 
+                    return {"color": "#f3ff36ff", "fillColor": "#f3ff36ff", "fillOpacity": 0.5, "weight": 1};
+                case "520": 
+                    return {"color": "#185405ff", "fillColor": "#185405ff", "fillOpacity": 0.5, "weight": 1};
+                case "528": case "554": case "669": case "849": case "996": 
+                    return {"color": "#effc35ff", "fillColor": "#effc35ff", "fillOpacity": 0.5, "weight": 1};
+                case "534": case "567": case "570": case "916": case "951": case "991": 
+                    return {"color": "#e1f132ff", "fillColor": "#e1f132ff", "fillOpacity": 0.5, "weight": 1};
+                case "549": 
+                    return {"color": "#a4470fff", "fillColor": "#a4470fff", "fillOpacity": 0.5, "weight": 1};
+                case "583": case "590": case "1023": 
+                    return {"color": "#ac5a13ff", "fillColor": "#ac5a13ff", "fillOpacity": 0.5, "weight": 1};
+                case "601": 
+                    return {"color": "#9c340bff", "fillColor": "#9c340bff", "fillOpacity": 0.5, "weight": 1};
+                case "609": 
+                    return {"color": "#9e380cff", "fillColor": "#9e380cff", "fillOpacity": 0.5, "weight": 1};
+                case "611": case "698": 
+                    return {"color": "#eff634ff", "fillColor": "#eff634ff", "fillOpacity": 0.5, "weight": 1};
+                case "613": case "616": 
+                    return {"color": "#a85011ff", "fillColor": "#a85011ff", "fillOpacity": 0.5, "weight": 1};
+                case "621": case "998": 
+                    return {"color": "#a4480fff", "fillColor": "#a4480fff", "fillOpacity": 0.5, "weight": 1};
+                case "624": case "681": 
+                    return {"color": "#a2c024ff", "fillColor": "#a2c024ff", "fillOpacity": 0.5, "weight": 1};
+                case "632": 
+                    return {"color": "#850000ff", "fillColor": "#850000ff", "fillOpacity": 0.5, "weight": 1};
+                case "633": 
+                    return {"color": "#81a61cff", "fillColor": "#81a61cff", "fillOpacity": 0.5, "weight": 1};
+                case "634": 
+                    return {"color": "#a1400dff", "fillColor": "#a1400dff", "fillOpacity": 0.5, "weight": 1};
+                case "638": 
+                    return {"color": "#880601ff", "fillColor": "#880601ff", "fillOpacity": 0.5, "weight": 1};
+                case "643": case "697": case "725": case "738": case "865": case "949": case "961": case "973": case "980": 
+                    return {"color": "#b0cb27ff", "fillColor": "#b0cb27ff", "fillOpacity": 0.5, "weight": 1};
+                case "655": 
+                    return {"color": "#084801ff", "fillColor": "#084801ff", "fillOpacity": 0.5, "weight": 1};
+                case "657": case "914": 
+                    return {"color": "#eae931ff", "fillColor": "#eae931ff", "fillOpacity": 0.5, "weight": 1};
+                case "683": case "694": 
+                    return {"color": "#e1d52dff", "fillColor": "#e1d52dff", "fillOpacity": 0.5, "weight": 1};
+                case "702": case "744": case "746": 
+                    return {"color": "#abc726ff", "fillColor": "#abc726ff", "fillOpacity": 0.5, "weight": 1};
+                case "713": 
+                    return {"color": "#749c19ff", "fillColor": "#749c19ff", "fillOpacity": 0.5, "weight": 1};
+                case "733": case "938": case "982": 
+                    return {"color": "#aeca26ff", "fillColor": "#aeca26ff", "fillOpacity": 0.5, "weight": 1};
+                case "739": case "974": case "995": 
+                    return {"color": "#a1bf23ff", "fillColor": "#a1bf23ff", "fillOpacity": 0.5, "weight": 1};
+                case "741": 
+                    return {"color": "#92b320ff", "fillColor": "#92b320ff", "fillOpacity": 0.5, "weight": 1};
+                case "743": 
+                    return {"color": "#9ebd23ff", "fillColor": "#9ebd23ff", "fillOpacity": 0.5, "weight": 1};
+                case "808": 
+                    return {"color": "#e9e831ff", "fillColor": "#e9e831ff", "fillOpacity": 0.5, "weight": 1};
+                case "883": case "955": 
+                    return {"color": "#a7c425ff", "fillColor": "#a7c425ff", "fillOpacity": 0.5, "weight": 1};
+                case "884": 
+                    return {"color": "#699417ff", "fillColor": "#699417ff", "fillOpacity": 0.5, "weight": 1};
+                case "900": 
+                    return {"color": "#98b821ff", "fillColor": "#98b821ff", "fillOpacity": 0.5, "weight": 1};
+                case "911": 
+                    return {"color": "#aac625ff", "fillColor": "#aac625ff", "fillOpacity": 0.5, "weight": 1};
+                case "932": 
+                    return {"color": "#ebeb31ff", "fillColor": "#ebeb31ff", "fillOpacity": 0.5, "weight": 1};
+                case "940": case "1003": 
+                    return {"color": "#a5c324ff", "fillColor": "#a5c324ff", "fillOpacity": 0.5, "weight": 1};
+                case "948": 
+                    return {"color": "#608d15ff", "fillColor": "#608d15ff", "fillOpacity": 0.5, "weight": 1};
+                case "992": 
+                    return {"color": "#044400ff", "fillColor": "#044400ff", "fillOpacity": 0.5, "weight": 1};
+                case "1001": 
+                    return {"color": "#911c06ff", "fillColor": "#911c06ff", "fillOpacity": 0.5, "weight": 1};
+                case "1008": 
+                    return {"color": "#90b220ff", "fillColor": "#90b220ff", "fillOpacity": 0.5, "weight": 1};
+                case "1016": 
+                    return {"color": "#7aa11bff", "fillColor": "#7aa11bff", "fillOpacity": 0.5, "weight": 1};
+                case "1022": 
+                    return {"color": "#9bba22ff", "fillColor": "#9bba22ff", "fillOpacity": 0.5, "weight": 1};
+                case "1024": 
+                    return {"color": "#7ea41cff", "fillColor": "#7ea41cff", "fillOpacity": 0.5, "weight": 1};
+                case "1029": 
+                    return {"color": "#a74f10ff", "fillColor": "#a74f10ff", "fillOpacity": 0.5, "weight": 1};
+                case "1032": 
+                    return {"color": "#a03f0dff", "fillColor": "#a03f0dff", "fillOpacity": 0.5, "weight": 1};
+                default:
+                    return {"color": "#9b320aff", "fillColor": "#9b320aff", "fillOpacity": 0.5, "weight": 1};
+            }
+        }
+
+        function geo_json_d2ca56470165050f1b867f1797639bbf_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d2ca56470165050f1b867f1797639bbf = L.geoJson(null, {
+                smoothFactor: 2,
+                onEachFeature: geo_json_d2ca56470165050f1b867f1797639bbf_onEachFeature,
+            
+                style: geo_json_d2ca56470165050f1b867f1797639bbf_styler,
+            ...{
+}
+        });
+
+        function geo_json_d2ca56470165050f1b867f1797639bbf_add (data) {
+            geo_json_d2ca56470165050f1b867f1797639bbf
+                .addData(data);
+        }
+            $.ajax("dc_plot_wgs84.geojson", {dataType: 'json', async: false})
+                .done(geo_json_d2ca56470165050f1b867f1797639bbf_add);
+
+        
+    
+            geo_json_d2ca56470165050f1b867f1797639bbf.addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+        
+    
+    var color_map_0e4188413aa1aa996a2ec23fa7257425 = {};
+
+    
+    color_map_0e4188413aa1aa996a2ec23fa7257425.color = d3.scale.threshold()
+              .domain([2.2, 2.264929859719439, 2.329859719438878, 2.3947895791583167, 2.4597194388777557, 2.5246492985971947, 2.589579158316633, 2.654509018036072, 2.719438877755511, 2.78436873747495, 2.849298597194389, 2.9142284569138277, 2.9791583166332667, 3.0440881763527057, 3.109018036072144, 3.173947895791583, 3.238877755511022, 3.303807615230461, 3.3687374749499, 3.433667334669339, 3.4985971943887777, 3.5635270541082162, 3.6284569138276552, 3.693386773547094, 3.758316633266533, 3.823246492985972, 3.888176352705411, 3.9531062124248497, 4.018036072144289, 4.082965931863727, 4.147895791583166, 4.212825651302605, 4.277755511022044, 4.342685370741483, 4.407615230460921, 4.472545090180361, 4.537474949899799, 4.602404809619239, 4.667334669338677, 4.732264529058116, 4.797194388777555, 4.862124248496993, 4.927054108216433, 4.991983967935872, 5.056913827655311, 5.121843687374749, 5.186773547094188, 5.251703406813627, 5.316633266533065, 5.381563126252505, 5.446492985971944, 5.511422845691383, 5.576352705410821, 5.64128256513026, 5.706212424849699, 5.771142284569138, 5.836072144288577, 5.901002004008016, 5.965931863727455, 6.030861723446893, 6.095791583166333, 6.160721442885771, 6.22565130260521, 6.290581162324649, 6.355511022044088, 6.420440881763527, 6.485370741482966, 6.550300601202404, 6.615230460921843, 6.680160320641282, 6.745090180360721, 6.81002004008016, 6.874949899799599, 6.939879759519038, 7.004809619238477, 7.069739478957916, 7.134669338677355, 7.199599198396793, 7.264529058116232, 7.329458917835671, 7.39438877755511, 7.459318637274549, 7.524248496993987, 7.589178356713426, 7.654108216432865, 7.719038076152305, 7.783967935871744, 7.848897795591182, 7.913827655310621, 7.97875751503006, 8.0436873747495, 8.108617234468937, 8.173547094188375, 8.238476953907815, 8.303406813627255, 8.368336673346693, 8.433266533066131, 8.49819639278557, 8.563126252505011, 8.62805611222445, 8.692985971943887, 8.757915831663325, 8.822845691382765, 8.887775551102205, 8.952705410821643, 9.017635270541081, 9.08256513026052, 9.14749498997996, 9.2124248496994, 9.277354709418837, 9.342284569138275, 9.407214428857715, 9.472144288577155, 9.537074148296593, 9.602004008016031, 9.666933867735471, 9.73186372745491, 9.79679358717435, 9.861723446893787, 9.926653306613225, 9.991583166332665, 10.056513026052103, 10.121442885771543, 10.186372745490981, 10.25130260521042, 10.316232464929861, 10.3811623246493, 10.446092184368737, 10.511022044088175, 10.575951903807614, 10.640881763527055, 10.705811623246493, 10.770741482965931, 10.83567134268537, 10.900601202404808, 10.96553106212425, 11.030460921843687, 11.095390781563125, 11.160320641282564, 11.225250501002002, 11.290180360721443, 11.355110220440881, 11.42004008016032, 11.484969939879758, 11.5498997995992, 11.614829659318637, 11.679759519038075, 11.744689378757517, 11.809619238476955, 11.874549098196393, 11.939478957915831, 12.00440881763527, 12.069338677354711, 12.13426853707415, 12.199198396793587, 12.264128256513025, 12.329058116232464, 12.393987975951905, 12.458917835671343, 12.523847695390781, 12.58877755511022, 12.653707414829658, 12.7186372745491, 12.783567134268537, 12.848496993987975, 12.913426853707413, 12.978356713426852, 13.043286573146293, 13.108216432865731, 13.17314629258517, 13.238076152304611, 13.30300601202405, 13.367935871743487, 13.432865731462925, 13.497795591182363, 13.562725450901805, 13.627655310621243, 13.692585170340681, 13.75751503006012, 13.822444889779558, 13.887374749499, 13.952304609218437, 14.017234468937875, 14.082164328657313, 14.147094188376752, 14.212024048096193, 14.276953907815631, 14.34188376753507, 14.406813627254508, 14.471743486973946, 14.536673346693387, 14.601603206412825, 14.666533066132263, 14.731462925851702, 14.79639278557114, 14.861322645290581, 14.92625250501002, 14.991182364729458, 15.0561122244489, 15.121042084168337, 15.185971943887775, 15.250901803607213, 15.315831663326652, 15.380761523046093, 15.445691382765531, 15.51062124248497, 15.575551102204408, 15.640480961923846, 15.705410821643287, 15.770340681362725, 15.835270541082163, 15.900200400801602, 15.96513026052104, 16.03006012024048, 16.09498997995992, 16.159919839679358, 16.224849699398796, 16.289779559118234, 16.354709418837675, 16.419639278557113, 16.48456913827655, 16.54949899799599, 16.61442885771543, 16.67935871743487, 16.744288577154308, 16.80921843687375, 16.874148296593187, 16.939078156312625, 17.004008016032063, 17.0689378757515, 17.133867735470943, 17.19879759519038, 17.26372745490982, 17.328657314629258, 17.393587174348696, 17.458517034068137, 17.523446893787575, 17.588376753507013, 17.65330661322645, 17.71823647294589, 17.78316633266533, 17.84809619238477, 17.913026052104208, 17.977955911823646, 18.042885771543084, 18.107815631262525, 18.172745490981963, 18.2376753507014, 18.30260521042084, 18.367535070140278, 18.43246492985972, 18.497394789579158, 18.562324649298596, 18.627254509018034, 18.692184368737475, 18.757114228456913, 18.82204408817635, 18.88697394789579, 18.951903807615228, 19.01683366733467, 19.081763527054107, 19.146693386773546, 19.211623246492984, 19.276553106212422, 19.341482965931863, 19.4064128256513, 19.47134268537074, 19.536272545090178, 19.601202404809616, 19.666132264529057, 19.731062124248496, 19.795991983967934, 19.860921843687372, 19.92585170340681, 19.99078156312625, 20.05571142284569, 20.120641282565128, 20.185571142284566, 20.250501002004004, 20.315430861723446, 20.380360721442884, 20.445290581162322, 20.51022044088176, 20.575150300601198, 20.64008016032064, 20.705010020040078, 20.769939879759516, 20.834869739478957, 20.899799599198396, 20.964729458917837, 21.029659318637275, 21.094589178356713, 21.15951903807615, 21.22444889779559, 21.28937875751503, 21.35430861723447, 21.419238476953907, 21.484168336673346, 21.549098196392784, 21.614028056112225, 21.678957915831663, 21.7438877755511, 21.80881763527054, 21.873747494989978, 21.93867735470942, 22.003607214428857, 22.068537074148296, 22.133466933867734, 22.19839679358717, 22.263326653306613, 22.32825651302605, 22.39318637274549, 22.458116232464928, 22.523046092184366, 22.587975951903807, 22.652905811623246, 22.717835671342684, 22.78276553106212, 22.84769539078156, 22.912625250501, 22.97755511022044, 23.042484969939878, 23.107414829659316, 23.172344689378754, 23.237274549098196, 23.302204408817634, 23.36713426853707, 23.43206412825651, 23.496993987975948, 23.56192384769539, 23.626853707414828, 23.691783567134266, 23.756713426853704, 23.821643286573142, 23.886573146292584, 23.95150300601202, 24.01643286573146, 24.081362725450898, 24.146292585170336, 24.21122244488978, 24.27615230460922, 24.341082164328657, 24.406012024048096, 24.470941883767534, 24.535871743486975, 24.600801603206413, 24.66573146292585, 24.73066132264529, 24.795591182364728, 24.86052104208417, 24.925450901803607, 24.990380761523046, 25.055310621242484, 25.12024048096192, 25.185170340681363, 25.2501002004008, 25.31503006012024, 25.379959919839678, 25.444889779559116, 25.509819639278557, 25.574749498997996, 25.639679358717434, 25.70460921843687, 25.76953907815631, 25.83446893787575, 25.89939879759519, 25.964328657314628, 26.029258517034066, 26.094188376753504, 26.159118236472946, 26.224048096192384, 26.28897795591182, 26.35390781563126, 26.418837675350698, 26.48376753507014, 26.548697394789578, 26.613627254509016, 26.678557114228454, 26.743486973947892, 26.808416833667334, 26.87334669338677, 26.93827655310621, 27.003206412825648, 27.068136272545086, 27.133066132264524, 27.197995991983966, 27.262925851703404, 27.327855711422842, 27.39278557114228, 27.457715430861718, 27.522645290581163, 27.5875751503006, 27.65250501002004, 27.717434869739478, 27.782364729458916, 27.847294589178357, 27.912224448897796, 27.977154308617234, 28.04208416833667, 28.10701402805611, 28.17194388777555, 28.23687374749499, 28.301803607214428, 28.366733466933866, 28.431663326653304, 28.496593186372746, 28.561523046092184, 28.62645290581162, 28.69138276553106, 28.756312625250498, 28.82124248496994, 28.886172344689378, 28.951102204408816, 29.016032064128254, 29.080961923847692, 29.145891783567134, 29.21082164328657, 29.27575150300601, 29.340681362725448, 29.405611222444886, 29.470541082164328, 29.535470941883766, 29.600400801603204, 29.665330661322642, 29.73026052104208, 29.79519038076152, 29.86012024048096, 29.925050100200398, 29.989979959919836, 30.054909819639274, 30.119839679358716, 30.184769539078154, 30.249699398797592, 30.31462925851703, 30.379559118236468, 30.44448897795591, 30.509418837675348, 30.574348697394786, 30.639278557114224, 30.704208416833662, 30.769138276553104, 30.834068136272542, 30.89899799599198, 30.96392785571142, 31.02885771543086, 31.0937875751503, 31.15871743486974, 31.223647294589178, 31.288577154308616, 31.353507014028054, 31.418436873747495, 31.483366733466934, 31.54829659318637, 31.61322645290581, 31.678156312625248, 31.74308617234469, 31.808016032064128, 31.872945891783566, 31.937875751503004, 32.00280561122244, 32.067735470941884, 32.132665330661325, 32.19759519038076, 32.2625250501002, 32.327454909819636, 32.39238476953908, 32.45731462925852, 32.522244488977954, 32.587174348697395, 32.65210420841683, 32.71703406813627, 32.78196392785571, 32.84689378757515, 32.91182364729459, 32.976753507014024, 33.041683366733466, 33.10661322645291, 33.17154308617234, 33.236472945891784, 33.30140280561122, 33.36633266533066, 33.4312625250501, 33.496192384769536, 33.56112224448898, 33.62605210420841, 33.690981963927854, 33.755911823647295, 33.82084168336673, 33.88577154308617, 33.950701402805606, 34.01563126252505, 34.08056112224449, 34.145490981963924, 34.210420841683366, 34.27535070140281, 34.34028056112225, 34.405210420841684, 34.470140280561125, 34.53507014028056, 34.6])
+              .range(['#014200ff', '#014300ff', '#024300ff', '#034400ff', '#044500ff', '#054601ff', '#064601ff', '#074701ff', '#084801ff', '#094901ff', '#0a4902ff', '#0b4a02ff', '#0c4b02ff', '#0d4c02ff', '#0e4c03ff', '#0f4d03ff', '#104e03ff', '#114f03ff', '#124f03ff', '#135004ff', '#145104ff', '#155204ff', '#165204ff', '#175304ff', '#185405ff', '#195505ff', '#1a5605ff', '#1b5605ff', '#1c5706ff', '#1d5806ff', '#1e5906ff', '#1f5906ff', '#205a06ff', '#215b07ff', '#225c07ff', '#235c07ff', '#245d07ff', '#255e08ff', '#265f08ff', '#265f08ff', '#276008ff', '#286108ff', '#296209ff', '#2a6209ff', '#2b6309ff', '#2c6409ff', '#2d6509ff', '#2e660aff', '#2f660aff', '#30670aff', '#31680aff', '#32690bff', '#33690bff', '#346a0bff', '#356b0bff', '#366c0bff', '#376c0cff', '#386d0cff', '#396e0cff', '#3a6f0cff', '#3b6f0dff', '#3c700dff', '#3d710dff', '#3e720dff', '#3f720dff', '#40730eff', '#41740eff', '#42750eff', '#43750eff', '#44760eff', '#45770fff', '#46780fff', '#47790fff', '#48790fff', '#497a10ff', '#4a7b10ff', '#4b7c10ff', '#4b7c10ff', '#4c7d10ff', '#4d7e11ff', '#4e7f11ff', '#4f7f11ff', '#508011ff', '#518112ff', '#528212ff', '#538212ff', '#548312ff', '#558412ff', '#568513ff', '#578513ff', '#588613ff', '#598713ff', '#5a8813ff', '#5b8814ff', '#5c8914ff', '#5d8a14ff', '#5e8b14ff', '#5f8c15ff', '#608c15ff', '#618d15ff', '#628e15ff', '#638f15ff', '#648f16ff', '#659016ff', '#669116ff', '#679216ff', '#689217ff', '#699317ff', '#6a9417ff', '#6b9517ff', '#6c9517ff', '#6d9618ff', '#6e9718ff', '#6f9818ff', '#709818ff', '#709918ff', '#719a19ff', '#729b19ff', '#739b19ff', '#749c19ff', '#759d1aff', '#769e1aff', '#779f1aff', '#789f1aff', '#79a01aff', '#7aa11bff', '#7ba21bff', '#7ca21bff', '#7da31bff', '#7ea41cff', '#7fa51cff', '#80a51cff', '#81a61cff', '#82a71cff', '#83a81dff', '#84a81dff', '#85a91dff', '#86aa1dff', '#87ab1dff', '#88ab1eff', '#89ac1eff', '#8aad1eff', '#8bae1eff', '#8caf1fff', '#8daf1fff', '#8eb01fff', '#8fb11fff', '#90b21fff', '#91b220ff', '#92b320ff', '#93b420ff', '#94b520ff', '#95b521ff', '#95b621ff', '#96b721ff', '#97b821ff', '#98b821ff', '#99b922ff', '#9aba22ff', '#9bbb22ff', '#9cbb22ff', '#9dbc22ff', '#9ebd23ff', '#9fbe23ff', '#a0be23ff', '#a1bf23ff', '#a2c024ff', '#a3c124ff', '#a4c224ff', '#a5c224ff', '#a6c324ff', '#a7c425ff', '#a8c525ff', '#a9c525ff', '#aac625ff', '#abc726ff', '#acc826ff', '#adc826ff', '#aec926ff', '#afca26ff', '#b0cb27ff', '#b1cb27ff', '#b2cc27ff', '#b3cd27ff', '#b4ce27ff', '#b5ce28ff', '#b6cf28ff', '#b7d028ff', '#b8d128ff', '#b9d129ff', '#bad229ff', '#bad329ff', '#bbd429ff', '#bcd529ff', '#bdd52aff', '#bed62aff', '#bfd72aff', '#c0d82aff', '#c1d82bff', '#c2d92bff', '#c3da2bff', '#c4db2bff', '#c5db2bff', '#c6dc2cff', '#c7dd2cff', '#c8de2cff', '#c9de2cff', '#cadf2cff', '#cbe02dff', '#cce12dff', '#cde12dff', '#cee22dff', '#cfe32eff', '#d0e42eff', '#d1e52eff', '#d2e52eff', '#d3e62eff', '#d4e72fff', '#d5e82fff', '#d6e82fff', '#d7e92fff', '#d8ea30ff', '#d9eb30ff', '#daeb30ff', '#dbec30ff', '#dced30ff', '#ddee31ff', '#deee31ff', '#dfef31ff', '#dff031ff', '#e0f131ff', '#e1f132ff', '#e2f232ff', '#e3f332ff', '#e4f432ff', '#e5f433ff', '#e6f533ff', '#e7f633ff', '#e8f733ff', '#e9f833ff', '#eaf834ff', '#ebf934ff', '#ecfa34ff', '#edfb34ff', '#eefb35ff', '#effc35ff', '#f0fd35ff', '#f1fe35ff', '#f2fe35ff', '#f3ff36ff', '#f3ff36ff', '#f3fe35ff', '#f2fd35ff', '#f2fc35ff', '#f1fb35ff', '#f1fa35ff', '#f1f934ff', '#f0f834ff', '#f0f734ff', '#eff634ff', '#eff533ff', '#eef433ff', '#eef333ff', '#edf233ff', '#edf133ff', '#edf032ff', '#ecef32ff', '#ecee32ff', '#ebed32ff', '#ebeb31ff', '#eaea31ff', '#eae931ff', '#e9e831ff', '#e9e731ff', '#e9e630ff', '#e8e530ff', '#e8e430ff', '#e7e330ff', '#e7e230ff', '#e6e12fff', '#e6e02fff', '#e6df2fff', '#e5de2fff', '#e5dd2eff', '#e4dc2eff', '#e4db2eff', '#e3da2eff', '#e3d92eff', '#e2d82dff', '#e2d72dff', '#e2d62dff', '#e1d52dff', '#e1d42cff', '#e0d32cff', '#e0d22cff', '#dfd12cff', '#dfd02cff', '#decf2bff', '#dece2bff', '#decd2bff', '#ddcc2bff', '#ddcb2bff', '#dcca2aff', '#dcc92aff', '#dbc82aff', '#dbc72aff', '#dac629ff', '#dac529ff', '#dac329ff', '#d9c229ff', '#d9c129ff', '#d8c028ff', '#d8bf28ff', '#d7be28ff', '#d7bd28ff', '#d6bc27ff', '#d6bb27ff', '#d6ba27ff', '#d5b927ff', '#d5b827ff', '#d4b726ff', '#d4b626ff', '#d3b526ff', '#d3b426ff', '#d2b326ff', '#d2b225ff', '#d2b125ff', '#d1b025ff', '#d1af25ff', '#d0ae24ff', '#d0ad24ff', '#cfac24ff', '#cfab24ff', '#ceaa24ff', '#cea923ff', '#cea823ff', '#cda723ff', '#cda623ff', '#cca522ff', '#cca422ff', '#cba322ff', '#cba222ff', '#cba122ff', '#caa021ff', '#ca9f21ff', '#c99e21ff', '#c99c21ff', '#c89b21ff', '#c89a20ff', '#c79920ff', '#c79820ff', '#c79720ff', '#c6961fff', '#c6951fff', '#c5941fff', '#c5931fff', '#c4921fff', '#c4911eff', '#c3901eff', '#c38f1eff', '#c38e1eff', '#c28d1dff', '#c28c1dff', '#c18b1dff', '#c18a1dff', '#c0891dff', '#c0881cff', '#bf871cff', '#bf861cff', '#bf851cff', '#be841cff', '#be831bff', '#bd821bff', '#bd811bff', '#bc801bff', '#bc7f1aff', '#bb7e1aff', '#bb7d1aff', '#bb7c1aff', '#ba7b1aff', '#ba7a19ff', '#b97919ff', '#b97819ff', '#b87719ff', '#b87518ff', '#b77418ff', '#b77318ff', '#b77218ff', '#b67118ff', '#b67017ff', '#b56f17ff', '#b56e17ff', '#b46d17ff', '#b46c17ff', '#b36b16ff', '#b36a16ff', '#b36916ff', '#b26816ff', '#b26715ff', '#b16615ff', '#b16515ff', '#b06415ff', '#b06315ff', '#b06214ff', '#af6114ff', '#af6014ff', '#ae5f14ff', '#ae5e13ff', '#ad5d13ff', '#ad5c13ff', '#ac5b13ff', '#ac5a13ff', '#ac5912ff', '#ab5812ff', '#ab5712ff', '#aa5612ff', '#aa5512ff', '#a95411ff', '#a95311ff', '#a85211ff', '#a85111ff', '#a85010ff', '#a74f10ff', '#a74d10ff', '#a64c10ff', '#a64b10ff', '#a54a0fff', '#a5490fff', '#a4480fff', '#a4470fff', '#a4460eff', '#a3450eff', '#a3440eff', '#a2430eff', '#a2420eff', '#a1410dff', '#a1400dff', '#a03f0dff', '#a03e0dff', '#a03d0dff', '#9f3c0cff', '#9f3b0cff', '#9e3a0cff', '#9e390cff', '#9d380bff', '#9d370bff', '#9c360bff', '#9c350bff', '#9c340bff', '#9b330aff', '#9b320aff', '#9a310aff', '#9a300aff', '#992f09ff', '#992e09ff', '#982d09ff', '#982c09ff', '#982b09ff', '#972a08ff', '#972908ff', '#962808ff', '#962608ff', '#952508ff', '#952407ff', '#952307ff', '#942207ff', '#942107ff', '#932006ff', '#931f06ff', '#921e06ff', '#921d06ff', '#911c06ff', '#911b05ff', '#911a05ff', '#901905ff', '#901805ff', '#8f1704ff', '#8f1604ff', '#8e1504ff', '#8e1404ff', '#8d1304ff', '#8d1203ff', '#8d1103ff', '#8c1003ff', '#8c0f03ff', '#8b0e03ff', '#8b0d02ff', '#8a0c02ff', '#8a0b02ff', '#890a02ff', '#890901ff', '#890801ff', '#880701ff', '#880601ff', '#870501ff', '#870400ff', '#860300ff', '#860200ff', '#850100ff', '#850000ff']);
+    
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.x = d3.scale.linear()
+              .domain([2.2, 34.6])
+              .range([0, 450 - 50]);
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.legend = L.control({position: 'topright'});
+    color_map_0e4188413aa1aa996a2ec23fa7257425.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_0e4188413aa1aa996a2ec23fa7257425.legend.addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.xAxis = d3.svg.axis()
+        .scale(color_map_0e4188413aa1aa996a2ec23fa7257425.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([2.2, 18.4, 34.6]);
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.g = color_map_0e4188413aa1aa996a2ec23fa7257425.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.g.selectAll("rect")
+        .data(color_map_0e4188413aa1aa996a2ec23fa7257425.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_0e4188413aa1aa996a2ec23fa7257425.x(color_map_0e4188413aa1aa996a2ec23fa7257425.color.domain()[i - 1]) : color_map_0e4188413aa1aa996a2ec23fa7257425.x.range()[0],
+            x1: i < color_map_0e4188413aa1aa996a2ec23fa7257425.color.domain().length ? color_map_0e4188413aa1aa996a2ec23fa7257425.x(color_map_0e4188413aa1aa996a2ec23fa7257425.color.domain()[i]) : color_map_0e4188413aa1aa996a2ec23fa7257425.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_0e4188413aa1aa996a2ec23fa7257425.g.call(color_map_0e4188413aa1aa996a2ec23fa7257425.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Height (m)");
+    
+            var layer_control_73374c2c940663f69e5eae0aa43d1fa2_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_591aacc7724b38eb9b764c6cc54068aa,
+                },
+                overlays :  {
+                    "AOI" : geo_json_c612f2645ecc0610d5662c3807ef1787,
+                    "Plot boundary" : geo_json_bee073af82d9de1f4496f79e25479ae8,
+                    "Dalponte \u0026 Coomes (2016) crowns" : geo_json_d2ca56470165050f1b867f1797639bbf,
+                },
+            };
+            let layer_control_73374c2c940663f69e5eae0aa43d1fa2 = L.control.layers(
+                layer_control_73374c2c940663f69e5eae0aa43d1fa2_layers.base_layers,
+                layer_control_73374c2c940663f69e5eae0aa43d1fa2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_eeaeda7045e3dccab0b97e5dac280b93);
+
+        
+</script>
+</html>
